@@ -4,7 +4,7 @@ print "> "
 user_number = gets.chomp.to_i
 nb = 1
 puts "Voici la pyramide :"
-    while (nb <= user_number && nb < 26)
+    while (nb <= user_number && nb < 26) #&& fonctionne pas, nb < 26 n'est pas pris en compte
         puts "#" * nb
         nb = nb+1
     end
@@ -16,9 +16,13 @@ def full_pyramid
     user_number = gets.chomp.to_i
     nb = 1
     puts "Voici la pyramide :"
-        while (nb <= user_number && nb < 26)
+    while (nb <= user_number && nb < 26) #&& fonctionne pas, nb < 26 n'est pas pris en compte
             nb_space = user_number - nb
-            puts "#{ " " * nb_space + "#" * nb }" + "#{ "#" * nb + " " * nb_space }"
+            puts "#{ " " * nb_space + "#" * nb }" + "#{ "#" * ( nb-1 ) + " " * nb_space }"
         nb = nb+1
     end
 end
+
+full_pyramid
+
+
