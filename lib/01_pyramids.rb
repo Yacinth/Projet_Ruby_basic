@@ -23,21 +23,12 @@ def full_pyramid
     end
 end
 
-def reverse_pyramid
-    puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
-    n = 5
-    while n >= 1
-      puts "#" * n
-      n = n - 1
-    end
-end
-
-
 def wtf_pyramid
     puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ? (choisis un nombre impair)"
     print "> "
-    user_number = gets.chomp.to_i #to_i récupère un nombre entier à l'entrée (comme ça si on introduit un symbole, le programme plante pas
-    while user_number % 2 == 0 #tant que le nombre est bien pair -> on passe dans cette boucle
+    user_number = gets.chomp.to_i #to_i récupère un nombre entier à l'entrée (comme ça si on introduit un symbole, le programme plante pas et met 0)
+    while user_number % 2 == 0 #on utilise le modulo pour vérifier si le reste de la division = 0
+        #tant que le nombre est bien pair -> on passe dans cette boucle
         puts "Même joueur joue encore. Ramsou voudrait un nombre impair. Combien d'étages veux-tu ?"
         print "> "
         user_number = gets.chomp.to_i
@@ -45,18 +36,18 @@ def wtf_pyramid
     nb = 1
     puts "Voici la pyramide :"
     #le triange supérieur du losange:
-    top = (user_number.to_f / 2).to_i+1 #to_f converti le nombre d'étages en float (nombre décimal) pour permettre une division exacte ; to_i+1 permet d'avoir l'entier supérieur après la division
-    while (nb <= top && nb < 26)
-        nb_space = top - nb
+    top = (user_number / 2) +1 #inutile : user_nomber.to_f converti le nombre d'étages en float (nombre décimal sans mots/lettres) pour permettre une division exa$    # to_i+1 permet d'avoir l'entier supérieur après la division
+    while (nb <= top && nb < 26) #&& nb < 26 n'est pas pris en compte
+        nb_space = top - nb #nb d'espace = la moitié + 1 - 1 donc le nb d'étage de la 1e partie = la moitié de user_number
         puts "#{ " " * nb_space + "#" * nb }" + "#{ "#" * ( nb-1 ) + " " * nb_space }"
         nb = nb+1
     end
-    
+
     #le triange inferieur du losange:
-    nb = (user_number.to_f / 2).to_i
+    nb = (user_number / 2)
     while (nb > 0)
-        nb_space = (user_number.to_f / 2).to_i+1 - nb
-        puts "#{ " " * nb_space + "#" * nb }" + "#{ "#" * ( nb-1 ) + " " * nb_space }"
+        nb_space = (user_number / 2)+1 - nb
+		puts "#{ " " * nb_space + "#" * nb }" + "#{ "#" * ( nb-1 ) + " " * nb_space }"
         nb = nb-1
     end
 end
