@@ -21,7 +21,7 @@ def tableau
 end
 
 def dé
- puts rand(1...6)
+ puts rand(1...6) #affiche une valeur aléatoire en 1 et 6 // rand(valeur min..valeur max)
 end
 
 
