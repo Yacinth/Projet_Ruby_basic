@@ -29,11 +29,12 @@ while ( mdp != try )
    if try ==  mdp
    end
  end
- ok = welcome_screen
+ ok = ok
 end
 
 def perform
-    login(signup, trytry)
+    ok = login(signup, trytry)
+    welcome_screen
 end
 
 perform
