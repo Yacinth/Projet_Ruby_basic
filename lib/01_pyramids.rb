@@ -18,10 +18,7 @@ def full_pyramid
     puts "Voici la pyramide :"
         while (nb <= user_number && nb < 26)
             nb_space = user_number - nb
-            puts "#{ " " * nb_space + "#" * nb } "
+            puts "#{ " " * nb_space + "#" * nb }" + "#{ "#" * nb + " " * nb_space }"
         nb = nb+1
     end
 end
-    
-full_pyramid
-
