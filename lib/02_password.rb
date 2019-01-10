@@ -12,18 +12,24 @@ def trytry
  return try
 end
 
+def welcome_screen
+ puts "messages échangés avec HULK"
+ puts "Hulk : ça m'enerve"
+ puts "Hulk : calme moi"
+end
+
 def login(signup, trytry)
  mdp = signup
  try = trytry
 
  while ( mdp != try )
   puts "Tu t'es trompé, réssaie"
+  print "> "  
   try = gets.chomp 
-  if try ==  mdp
-  puts "ok"
-  end
+   if try ==  mdp
+   end
  end
- puts "ok"
+ ok = welcome_screen
 end
 
 login(signup, trytry)
