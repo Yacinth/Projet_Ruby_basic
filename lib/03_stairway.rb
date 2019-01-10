@@ -1,5 +1,23 @@
-stairs = 1
-while (stairs <= 10)
-    puts ("# " * stairs).rjust(30) #(a).rjust(b) // espace = b-(nb caractères a) // (nb de caractères a)<b -> il rajoute une chaîne de caractères devant "string a" d'une valeur "b-(nb caractères a)"
-    stairs += 1
+def stairs
+stair = 1
+while (stair <= 10)
+    puts ("# " * stair)
+#.rjust(30, '        T                   ') #(a).rjust(b) // espace = b-(nb caractères a) // (nb de caractères a)<b -> il rajoute une chaîne de caractères devant "string a" d'une valeur "b-(nb caractères a)"
+    stair += 1
+    
 end
+    s = 6
+end
+
+def guy
+    puts "T"
+end
+
+def test(stairs)
+    if stairs == 6
+        puts "T"
+end
+    end
+    
+    
+test(stairs)
