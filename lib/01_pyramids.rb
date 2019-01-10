@@ -23,6 +23,16 @@ def full_pyramid
     end
 end
 
+def reverse_pyramid
+    puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+    n = 5
+    while n >= 1
+      puts "#" * n
+      n = n - 1
+    end
+end
+
+
+half_pyramid
 full_pyramid
-
-
+reverse_pyramid
